@@ -8,8 +8,9 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.[contenthash].js",
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "./public/dist"),
     publicPath: "",
+    assetModuleFilename: "assets/[hash][ext][query]",
   },
   mode: "none",
   module: {
@@ -50,16 +51,16 @@ module.exports = {
   plugins: [
     new TerserPlugin(),
     new MiniCssExtractPlugin({
-      filename: "public/styles.[contenthash].css",
+      filename: "styles.[contenthash].css",
     }),
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(/* {
+    new HtmlWebpackPlugin({
       title: "Pig Game",
-      filename: "public/index.html",
-            template: "src/index.hbs",
+      filename: "index.html",
+      template: "src/index.hbs",
       meta: {
         description: "Some description",
       },
-    } */),
+    }),
   ],
 };
