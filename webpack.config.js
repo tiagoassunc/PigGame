@@ -12,7 +12,7 @@ module.exports = {
     publicPath: "",
     assetModuleFilename: "assets/[hash][ext][query]",
   },
-  mode: "none",
+  mode: "development",
   module: {
     rules: [
       {
@@ -45,6 +45,10 @@ module.exports = {
             plugins: ["@babel/plugin-proposal-class-properties"],
           },
         },
+      },
+      {
+        test: /\.hbs$/,
+        use: ["handlebars-loader"],
       },
     ],
   },
