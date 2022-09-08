@@ -17,7 +17,7 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.(svg)$/,
+        test: /\.svg$/,
         type: "asset/inline",
       },
       {
@@ -33,12 +33,12 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/env"],
+            presets: ["@babel/env", "@babel/react"],
             plugins: ["@babel/plugin-proposal-class-properties"],
           },
         },
