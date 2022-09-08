@@ -23,7 +23,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(svg)$/,
+        test: /\.svg$/,
         type: "asset/inline",
         generator: {
           filename: "assets/svg/[hash][ext][query]",
@@ -45,12 +45,12 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/env"],
+            presets: ["@babel/env", "@babel/react"],
             plugins: ["@babel/plugin-proposal-class-properties"],
           },
         },
