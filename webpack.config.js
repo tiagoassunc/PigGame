@@ -45,7 +45,6 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/env", "@babel/react"],
             plugins: ["@babel/plugin-proposal-class-properties"],
           },
         },
