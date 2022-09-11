@@ -10,6 +10,13 @@ module.exports = {
     publicPath: "",
   },
   mode: "development",
+  devServer: {
+    static: path.resolve(__dirname, "./dist"),
+    compress: true,
+    hot: true,
+    open: true,
+    port: 3000,
+  },
   module: {
     rules: [
       {
