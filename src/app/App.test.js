@@ -11,7 +11,7 @@ afterEach(cleanup);
 
 describe("This will test App", () => {
   test("renders message", () => {
-    render(<App firstName="Tiago" lastName="Souza" />);
+    render(<App />);
     const app = screen.getByText("Pig Game");
     expect(app).toBeInTheDocument();
   });
