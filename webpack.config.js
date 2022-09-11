@@ -10,6 +10,13 @@ module.exports = {
     publicPath: "",
   },
   mode: "development",
+  devServer: {
+    static: path.resolve(__dirname, "./dist"),
+    compress: true,
+    hot: true,
+    open: true,
+    port: 3000,
+  },
   module: {
     rules: [
       {
@@ -38,7 +45,6 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/env", "@babel/react"],
             plugins: ["@babel/plugin-proposal-class-properties"],
           },
         },
