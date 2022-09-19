@@ -1,7 +1,12 @@
 import React from "react";
 
-const App = () => {
-  return <h1>Pig Game</h1>;
-};
+import "../styles/base/_base.scss";
+import Routes from "./Routes/Routes.jsx";
 
-export default App;
+export const App = () => {
+  return (
+    <div>
+      <Routes />
+    </div>
+  );
+};
