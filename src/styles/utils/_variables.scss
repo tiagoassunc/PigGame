@@ -1,0 +1,22 @@
+$pink-colors: (
+  primary: #fb5858,
+  secondary: #fb9f9f,
+  tertiary: #ffbfd3,
+  quaternary: #f19e93,
+);
+
+@function getPinkColor($color-name) {
+  @return map-get($pink-colors, $color-name);
+}
+
+$font-sizes: (
+  xl: 3rem,
+  lg: 2.5rem,
+  md: 2rem,
+  sm: 1.8rem,
+  xs: 1.6rem,
+);
+
+@function getFontSize($size) {
+  @return map-get($font-sizes, $size);
+}
