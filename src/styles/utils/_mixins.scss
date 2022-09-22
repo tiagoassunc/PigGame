@@ -1,0 +1,11 @@
+@import "../utils/variables";
+
+@mixin stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    getPinkColor(quaternary) 0px,
+    getPinkColor(quaternary) 20px,
+    wheat 20px,
+    wheat 40px
+  );
+}
