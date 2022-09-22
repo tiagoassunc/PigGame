@@ -1,3 +1,14 @@
-h1 {
-  color: pink;
+@import "../../styles/utils/variables";
+
+.header-container {
+  width: 80%;
+  height: 5rem;
+  background-color: transparentize(black, 0.1);
+  border-radius: getBorder(card);
+}
+
+.logo-title {
+  color: getPinkColor(secondary);
+  font-size: getFontSize(xl);
+  text-align: center;
 }
