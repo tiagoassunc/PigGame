@@ -1,0 +1,11 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+.game-container {
+  width: 80%;
+  height: 95%;
+  background-color: transparentize(black, 0.1);
+  border-radius: getBorder(card);
+  @include center;
+  flex-direction: column;
+}
