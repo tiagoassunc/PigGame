@@ -1,14 +1,18 @@
 @import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
 
 .header-container {
   width: 80%;
-  height: 5rem;
+  height: 70%;
   background-color: transparentize(black, 0.1);
   border-radius: getBorder(card);
+  text-transform: uppercase;
+  @include center;
 }
 
 .logo-title {
   color: getPinkColor(secondary);
   font-size: getFontSize(xl);
+  font-family: "Great Vibes", cursive;
   text-align: center;
 }
