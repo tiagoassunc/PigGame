@@ -8,4 +8,5 @@
   border-radius: getBorder(card);
   @include center;
   flex-direction: column;
+  justify-content: space-around;
 }
