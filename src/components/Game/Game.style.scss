@@ -1,17 +1,12 @@
 @import "../../styles/utils/variables";
 @import "../../styles/utils/mixins";
 
-.header-container {
+.game-container {
   width: 80%;
-  height: 70%;
+  height: 95%;
   background-color: transparentize(black, 0.1);
   border-radius: getBorder(card);
   @include center;
-}
-
-.logo-title {
-  color: getPinkColor(tertiary);
-  font-size: getFontSize(xl);
-  font-family: "Great Vibes", cursive;
-  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
 }

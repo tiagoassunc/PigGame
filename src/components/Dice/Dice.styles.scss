@@ -1,0 +1,51 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+.dice-container {
+  width: 60%;
+  height: 12%;
+  background-color: getPinkColor(primary);
+  border-radius: getBorder(card);
+  border: solid 2px getPinkColor(tertiary);
+
+  @include center;
+  justify-content: space-around;
+}
+
+.roll {
+  background-color: beige;
+  font-size: getFontSize(md);
+  padding: 1rem;
+  border-radius: getBorder(card);
+  border: solid 2px black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: green;
+    color: aliceblue;
+  }
+}
+
+.curren-value {
+  background-color: beige;
+  color: getPinkColor(primary);
+  font-size: getFontSize(xl) * 1.2;
+  padding: 1rem 2rem;
+  border-radius: getBorder(card);
+  border: solid 2px black;
+  font-weight: bolder;
+}
+
+.stop {
+  background-color: beige;
+  font-size: getFontSize(md);
+  padding: 1rem;
+  border-radius: getBorder(card);
+  border: solid 2px black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: brown;
+    color: aliceblue;
+  }
+}

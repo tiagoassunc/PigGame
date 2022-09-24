@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/base/_base.scss";
+import "../../styles/base/base.scss";
 import Routes from "./Routes/Routes.jsx";
 
 export const App = () => {

@@ -1,0 +1,57 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+.player-container {
+  width: 75%;
+  height: 35%;
+  background-color: getPinkColor(quaternary);
+  border-radius: getBorder(card);
+  border: solid 2px getPinkColor(primary);
+
+  @include center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.player-title {
+  color: black;
+  font-size: getFontSize(xl);
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: wheat;
+  padding: 0.5rem 3rem;
+  border: solid 2px black;
+}
+
+.player-score {
+  color: black;
+  font-size: getFontSize(xl) * 2;
+  font-family: "Great Vibes", cursive;
+  margin: 2rem;
+  text-align: center;
+}
+
+.current-container {
+  background-color: wheat;
+  // width: 25%;
+  border: solid 1px black;
+  border-radius: getBorder(card);
+  overflow: hidden;
+}
+
+.current-text {
+  padding: 0 1rem;
+  text-align: center;
+  color: black;
+  font-size: getFontSize(xl);
+  font-family: "Great Vibes", cursive;
+  background-color: getPinkColor(primary);
+}
+
+.current-score {
+  text-align: center;
+  color: black;
+  font-size: getFontSize(xl);
+  font-family: "Great Vibes", cursive;
+}
