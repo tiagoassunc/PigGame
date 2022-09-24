@@ -1,6 +1,5 @@
 import React from "react";
-import { Header } from "../components/index";
-import { Game } from "../components/index";
+import { Header, Game } from "../components/index";
 
 import "../styles/layout/pig-page.scss";
 
