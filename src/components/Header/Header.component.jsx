@@ -4,7 +4,7 @@ import "./Header.styles.scss";
 export const Header = () => {
   return (
     <div className="header-container">
-      <p className="logo-title">Pig Header</p>
+      <p className="logo-title">🐖 Pig Game 🐖</p>
     </div>
   );
 };
