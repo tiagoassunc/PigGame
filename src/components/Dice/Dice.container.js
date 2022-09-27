@@ -57,8 +57,6 @@ const Dice = () => {
     };
   }
 
-  console.log("player", playerStore);
-
   return (
     <DiceJsx onRoll={onRoll} onStop={onStop} diceValue={diceCurrent}></DiceJsx>
   );
