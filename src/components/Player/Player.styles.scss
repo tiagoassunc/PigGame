@@ -28,13 +28,11 @@
   color: black;
   font-size: getFontSize(xl) * 2;
   font-family: "Great Vibes", cursive;
-  margin: 2rem;
   text-align: center;
 }
 
 .current-container {
   background-color: wheat;
-  // width: 25%;
   border: solid 1px black;
   border-radius: getBorder(card);
   overflow: hidden;
