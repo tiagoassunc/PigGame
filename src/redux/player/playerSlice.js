@@ -21,13 +21,7 @@ export const playerSlice = createSlice({
   },
 });
 
-export const {
-  setActivePlayer,
-  setPlayer2Score,
-  setPlayer2Current,
-  setPlayer1,
-  setPlayer2,
-} = playerSlice.actions;
+export const { setActivePlayer, setPlayer1, setPlayer2 } = playerSlice.actions;
 
 export default playerSlice.reducer;
 
