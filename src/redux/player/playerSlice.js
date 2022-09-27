@@ -18,10 +18,25 @@ export const playerSlice = createSlice({
     setPlayer2: (state, action) => {
       state.player2 = action.payload;
     },
+
+    resetGame: (state) => {
+      state.activePlayer = 1;
+      state.player1 = {
+        ...state.player1,
+        score: 0,
+        current: 0,
+      };
+      state.player2 = {
+        ...state.player2,
+        score: 0,
+        current: 0,
+      };
+    },
   },
 });
 
-export const { setActivePlayer, setPlayer1, setPlayer2 } = playerSlice.actions;
+export const { setActivePlayer, setPlayer1, setPlayer2, resetGame } =
+  playerSlice.actions;
 
 export default playerSlice.reducer;
 
