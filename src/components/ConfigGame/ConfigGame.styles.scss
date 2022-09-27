@@ -1,0 +1,9 @@
+@import "../../styles/utils/variables";
+
+.config-container {
+  height: 95%;
+  width: 90%;
+
+  background-color: transparentize(black, 0.1);
+  border-radius: getBorder(card);
+}
