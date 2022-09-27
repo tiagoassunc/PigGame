@@ -11,35 +11,22 @@ export const playerSlice = createSlice({
     setActivePlayer: (state, action) => {
       state.activePlayer = action.payload;
     },
-    setPlayer1Name: (state, action) => {
-      state.player1.name = action.payload;
+
+    setPlayer1: (state, action) => {
+      state.player1 = action.payload;
     },
-    setPlayer2Name: (state, action) => {
-      state.player2.name = action.payload;
-    },
-    setPlayer1Score: (state, action) => {
-      state.player1.score = state.player1.score + action.payload;
-    },
-    setPlayer2Score: (state, action) => {
-      state.player2.score = state.player2.score + action.payload;
-    },
-    setPlayer1Current: (state, action) => {
-      state.player1.current = action.payload;
-    },
-    setPlayer2Current: (state, action) => {
-      state.player2.current = action.payload;
+    setPlayer2: (state, action) => {
+      state.player2 = action.payload;
     },
   },
 });
 
 export const {
   setActivePlayer,
-  setPlayer1Name,
-  setPlayer2Name,
-  setPlayer1Score,
   setPlayer2Score,
-  setPlayer1Current,
   setPlayer2Current,
+  setPlayer1,
+  setPlayer2,
 } = playerSlice.actions;
 
 export default playerSlice.reducer;

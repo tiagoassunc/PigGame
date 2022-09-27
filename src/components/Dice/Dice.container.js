@@ -3,11 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { Dice as DiceJsx } from "./Dice.component.jsx";
 import {
-  setPlayer1Current,
-  setPlayer2Current,
-  setPlayer1Score,
-  setPlayer2Score,
   setActivePlayer,
+  setPlayer1,
+  setPlayer2,
 } from "../../redux/player/playerSlice";
 
 const Dice = () => {
@@ -17,8 +15,8 @@ const Dice = () => {
 
   const playerStore = useSelector((state) => state.player);
   const activePlayer = playerStore.activePlayer;
-  const player1Current = playerStore.player1.current;
-  const player2Current = playerStore.player2.current;
+  const player1 = playerStore.player1;
+  const player2 = playerStore.player2;
 
   let onRoll;
   let onStop;
@@ -34,26 +32,48 @@ const Dice = () => {
       const rollingResult = rollingDice();
       setDiceCurrent(rollingResult);
 
-      dispatch(setPlayer1Current(player1Current + rollingResult));
+      dispatch(
+        setPlayer1({
+          ...player1,
+          current: player1.current + rollingResult,
+        })
+      );
     };
     onStop = () => {
       setDiceCurrent(0);
-      dispatch(setPlayer1Current(0));
-      dispatch(setPlayer1Score(player1Current));
       dispatch(setActivePlayer(2));
+
+      dispatch(
+        setPlayer1({
+          ...player1,
+          current: 0,
+          score: player1.score + player1.current,
+        })
+      );
     };
   } else {
     onRoll = () => {
       const rollingResult = rollingDice();
       setDiceCurrent(rollingResult);
 
-      dispatch(setPlayer2Current(player2Current + rollingResult));
+      dispatch(
+        setPlayer2({
+          ...player2,
+          current: player2.current + rollingResult,
+        })
+      );
     };
     onStop = () => {
       setDiceCurrent(0);
-      dispatch(setPlayer2Current(0));
-      dispatch(setPlayer2Score(player2Current));
       dispatch(setActivePlayer(1));
+
+      dispatch(
+        setPlayer2({
+          ...player2,
+          current: 0,
+          score: player2.score + player2.current,
+        })
+      );
     };
   }
 
