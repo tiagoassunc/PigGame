@@ -5,14 +5,14 @@
 
   &-main {
     height: 100%;
-    flex-grow: 2;
+    flex-grow: 4;
   }
 
   &-config {
     height: 100%;
     flex-grow: 1;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
   }
 }
