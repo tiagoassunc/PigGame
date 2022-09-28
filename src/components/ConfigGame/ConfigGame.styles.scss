@@ -1,4 +1,5 @@
 @import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
 
 .config-container {
   height: 95%;
@@ -6,4 +7,82 @@
 
   background-color: transparentize(black, 0.1);
   border-radius: getBorder(card);
+}
+
+.form {
+  padding: 0 3rem;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  @include center;
+
+  &-text {
+    width: 70%;
+    color: wheat;
+    font-size: getFontSize(lg);
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 4rem 0 8rem 0;
+    background-color: getPinkColor(primary);
+    padding: 0.5rem;
+    border: solid 4px black;
+  }
+}
+
+.subtitle {
+  &-text {
+    color: wheat;
+    font-size: getFontSize(lg);
+    text-transform: uppercase;
+    font-family: "Great Vibes", cursive;
+    margin-bottom: 3rem;
+    display: inline-block;
+  }
+}
+
+.config-section {
+  border-bottom: solid 2px beige;
+  padding-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  font-size: getFontSize(sm);
+
+  &-label {
+    display: block;
+    color: getPinkColor(tertiary);
+  }
+
+  &-component {
+    display: inline-block;
+    font-size: getFontSize(sm);
+    text-align: center;
+    padding: 0 1.2rem;
+    height: 2.5rem;
+    width: 45%;
+    border-radius: getBorder(card);
+    border: none;
+  }
+
+  &-submit {
+    text-transform: uppercase;
+    font-size: getFontSize(md);
+    padding: 1rem 3rem;
+    font-family: "Great Vibes", cursive;
+    background-color: wheat;
+    color: getPinkColor(primary);
+    font-weight: 600;
+  }
+}
+
+.submit-container {
+  width: 100%;
+  display: flex;
+  @include center;
 }
