@@ -24,6 +24,7 @@ $font-sizes: (
 $border-proportions: (
   round: 50%,
   card: 0.8rem,
+  input: 0.5rem,
 );
 
 @function getBorder($proportions) {
